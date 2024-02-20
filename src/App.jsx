@@ -1,14 +1,16 @@
-import styles from "./App.module.css"
-
+import { Routes, Route } from "react-router-dom"
+import Home from "./Home"
+import About from "./About"
 
 function App() {
 
 
   return (
     <>
-      <h1 className={styles.header} >Movie app</h1>
-      <p>Welcome to my app!</p>
-      <hr />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
     </>
   )
 }
